@@ -1,0 +1,33 @@
+<%- include("./partials/header"); -%>
+  <!-- Login page -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">
+      <img src= "../public/images/logo.png" width="60" height="60" class="d-inline-block align-top " alt=""> <p style="color:black">  VIT Bhopal</p> </a>
+  </nav>
+  <main id="login-page" class="mt-80 font-mono">
+    <form action="" method="post" class="card mx-auto max-w-lg">
+      <div class="p-3">
+        <h1 class="text-center">Welcome</h1>
+        <div class="mt-3">
+          <label for="user-email" class="mb-2">Email</label>
+          <input type="email" id="user-email" name="userEmail" placeholder="Enter email id... " class="border-violet-500 border-2 rounded w-full p-2">
+        </div>
+        <div class="mt-4 mb-6">
+          <label for="user-password" class="mb-2"> Password</label>
+          <input type="password" id="user-password" name="userPassword" placeholder="Enter password..." class="border-violet-500 border-2 rounded w-full p-2">
+        </div>
+        <button type="submit" class="primary-button mb-3 w-full">Log-In</button>
+        <div class="flex flex-row justify-between mt-5">
+          <p class="inline-block">Don't have an account? <a href="/register" class="font-bold text-violet-400 hover:cursor-pointer "> Sign up</a></p>
+          <a class="hover:text-violet-500 cursor-pointer">Forgot Password</a>
+        </div>
+      </div>
+    </form>
+    <div id="login-output" class="font-extrabold text-center text-red-500 mx-auto mt-4 p-3">
+      <%= message %>
+    </div>
+  </main>
+  
+
+</body>
+</html>

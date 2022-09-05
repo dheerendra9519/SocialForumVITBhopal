@@ -1,0 +1,231 @@
+<%- include("./partials/header"); -%>
+
+  <%- include("./partials/navbar"); -%>
+    <main class="grid grid-cols-5 gap-5" id="home-page">
+      <div class="col-start-1 col-end-2">
+        <!-- Name and profile picture section  -->
+        <section id="user-picture" class=" flex flex-col items-center">
+          <img src="/images/Resume Photo.jpg" alt="image could not be loaded" class="rounded-full h-60 w-60 ">
+          <h1 class="mt-5 text-white">
+            <%=name.firstName %>
+              <%= name.lastName%>
+          </h1>
+        </section>
+
+        <!-- Description and Hobbies section  -->
+        <section class="card mt-6 text-white">
+          <div id="about-me" class="divide-y-2 px-2">
+            <div>
+              <h3 class="text-center">About Me</h3>
+              <p class="mt-4 text-justify">
+                <%= aboutMe %>
+              </p>
+            </div>
+            <div class="mt-3">
+              <!-- hobbies section -->
+              <h3 class="mt-3 text-center">Hobbies</h3>
+              <ul class="mt-2 grid grid-cols-2 text-center">
+                <!-- hobbies will be entered here by JavaScript -->
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-start-2 col-end-5">
+        <!-- Section to make Posts -->
+        <section id="make-post" class="px-20">
+          <div class="card">
+            <div class="divide-y mt-3 mb-0">
+              <div class="pl-2 pt-2">
+                <input type="text" name="title" id="title" placeholder="Title" class="mb-2 pl-1"
+                  style="width: 100%; background-color: #2a2a2a">
+                <textarea name="body" id="body" placeholder="Write a description..."
+                  style="width: 100%; min-height: 6.2rem; resize: none; background-color: #2a2a2a"
+                  class="pl-1"></textarea>
+                <input type="hidden" name="userId" value="<%= userId %>">
+              </div>
+              <div class="p-2 pl-0">
+                <button type="submit" class="primary-button">Post</button>
+                <div id="make-post-output" class="inline-block ml-10 font-mono italic">
+                  <!-- output for post Submit -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section where Posts of other Users are displayed -->
+        <section id="posts" class="col-start-2 col-end-5 px-20 mt-6">
+          <div>
+            <h3 class="pl-2 text-white">Posts</h3>
+            <div class="card p-3 mt-3">
+              <p class="text-xs">posted by <span
+                  class="hover:underline cursor-pointer text-violet-400">Deakensuke</span></p>
+              <p class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet facilis
+                sequi alias consequuntur praesentium exercitationem quasi libero necessitatibus reiciendis?</p>
+              <p class="post-body mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam doloribus
+                quia necessitatibus voluptatum qui enim, dicta porro soluta placeat voluptas nemo omnis numquam quidem
+                nesciunt possimus. Neque, nulla provident?</p>
+              <ul class="flex flex-row mt-2 text-base">
+                <li class="mr-3 hover:text-violet-400 cursor-pointer"><i class="fas fa-heart"></i><span
+                    class="ml-1">100K+</span< /li>
+                <li class="hover:text-violet-400 cursor-pointer"><i class="far fa-comment-alt"></i><span
+                    class="ml-1">127</span></li>
+              </ul>
+            </div>
+            <div class="card p-3 mt-3">
+              <p class="text-xs">posted by <span class="hover:underline cursor-pointer text-violet-400">Cupcake</span>
+              </p>
+              <p class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet facilis
+                sequi alias consequuntur praesentium exercitationem quasi libero necessitatibus reiciendis?</p>
+              <p class="post-body mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam doloribus
+                quia necessitatibus voluptatum qui enim, dicta porro soluta placeat voluptas nemo omnis numquam quidem
+                nesciunt possimus. Neque, nulla provident?</p>
+              <ul class="flex flex-row mt-2 text-base">
+                <li class="mr-3 hover:text-violet-400 cursor-pointer"><i class="fas fa-heart"></i><span class="ml-1">500
+                    </span< /li>
+                <li class="hover:text-violet-400 cursor-pointer"><i class="far fa-comment-alt"></i><span
+                    class="ml-1">70</span></li>
+              </ul>
+            </div>
+            <div class="card p-3 mt-3">
+              <p class="text-xs">posted by <span
+                  class="hover:underline cursor-pointer text-violet-400">PrincessXyu</span></p>
+              <p class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet facilis
+                sequi alias consequuntur praesentium exercitationem quasi libero necessitatibus reiciendis?</p>
+              <p class="post-body mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam doloribus
+                quia necessitatibus voluptatum qui enim, dicta porro soluta placeat voluptas nemo omnis numquam quidem
+                nesciunt possimus. Neque, nulla provident?</p>
+              <ul class="flex flex-row mt-2 text-base">
+                <li class="mr-3 hover:text-violet-400 cursor-pointer"><i
+                    class="fas fa-heart hover:text-violet-400"></i><span class="ml-1">113</span< /li>
+                <li class="hover:text-violet-400 cursor-pointer"><i class="far fa-comment-alt"></i><span
+                    class="ml-1">5</span></li>
+              </ul>
+            </div>
+            <div class="card p-3 mt-3">
+              <p class="text-xs">posted by <span
+                  class="hover:underline cursor-pointer text-violet-400">PrincessXyu</span></p>
+              <p class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet facilis
+                sequi alias consequuntur praesentium exercitationem quasi libero necessitatibus reiciendis?</p>
+              <p class="post-body mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam doloribus
+                quia necessitatibus voluptatum qui enim, dicta porro soluta placeat voluptas nemo omnis numquam quidem
+                nesciunt possimus. Neque, nulla provident?</p>
+              <ul class="flex flex-row mt-2 text-base">
+                <li class="mr-3 hover:text-violet-400 cursor-pointer"><i
+                    class="fas fa-heart hover:text-violet-400"></i><span class="ml-1">113</span< /li>
+                <li class="hover:text-violet-400 cursor-pointer"><i class="far fa-comment-alt"></i><span
+                    class="ml-1">5</span></li>
+              </ul>
+            </div>
+            <button class="secondary-button my-5 ml-80">Load More</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-start-5 col-end-6">
+        <!-- Skills section -->
+        <section id="skills" class=" card">
+          <!-- Skills will be displayed here via JavaScript -->
+        </section>
+
+        <!-- Events section -->
+        <section id="events" class="card mt-6 text-white">
+          <h3 class="text-center mb-3">Events</h3>
+          <div class="mb-2">
+            <p class="font-semibold">5th Feb:</p>
+            <p>Programming in Java Exam</p>
+          </div>
+          <div class="mb-2">
+            <p class="font-semibold">7th Feb:</p>
+            <p>PLA Exam</p>
+          </div>
+          <div class="mb-2">
+            <p class="font-semibold">10th Feb:</p>
+            <p>Web Security Exam</p>
+          </div>
+          <div class="mb-2">
+            <p class="font-semibold">11th Feb:</p>
+            <p>Cloud Security Exam</p>
+          </div>
+          <div class="mb-2">
+            <p class="font-semibold">11th Feb:</p>
+            <p>Applied Linear Algebra Exam</p>
+          </div>
+          <div>
+            <p class="font-semibold">13th Feb:</p>
+            <p>Advanced Cyber Security Nascomm Exam</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="user-profile-wrapper" class="hidden">
+      <section id="user-profile" class="card max-w-7xl mx-auto">
+        <i class="fas fa-times fa-2x hover:text-violet-500 hover:cursor-pointer" id="user-profile-cancel-button"></i>
+        <div id="Name" class="grid grid-cols-2 gap-10 mb-4 pr-20">
+          <div>
+            <label for="first-name" class="block mb-2 text-xl">First Name</label>
+            <input type="text" name="firstName" id="first-name"
+              class="border-2 rounded border-gray-500 focus:outline-none focus:border-violet-500 w-9/12 p-2"
+              autocomplete="off">
+          </div>
+          <div>
+            <label for="last-name" class="block mb-2 text-xl">Last Name</label>
+            <input type="text" name="lastName" id="last-name"
+              class="border-2 rounded border-gray-500 focus:outline-none focus:border-violet-500 w-9/12 p-2"
+              autocomplete="off">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="about-me" class="block mb-2 text-xl">About Me</label>
+          <textarea name="aboutMe" id="about-me"
+            style="width: 100%; min-height: 6.2rem; resize: none; background-color: #2a2a2a"
+            class="border-2 rounded border-gray-500 focus:outline-none focus:border-violet-500 p-2"></textarea>
+        </div>
+        <div class="mb-4">
+          <label for="hobbies" class="block mb-2 text-xl">Hobbies <span
+              class="text-zinc-400 italic text-base">(seperated by commas)</span> </label>
+          <input type="text" name="hobbies" id="hobbies"
+            class="border-2 rounded border-gray-500 focus:outline-none focus:border-violet-500 w-full p-2">
+        </div>
+        <div id="user-skills-section">
+          <label for="skills" class="block mb-2 text-xl">Skills</label>
+          <div class="flex flex-row">
+            <input type="text" name=""
+              class="border-2 rounded border-gray-500 focus:outline-none focus:border-violet-500 w-80 p-2 skill-name">
+            <div class="ml-5">
+              Proficiency <span class="text-zinc-400 italic text-base">(out of 10)</span>
+              <input type="number" name=""
+                class="border-2 rounded border-gray-500 focus:outline-none focus:border-violet-500 w-20 p-2 skill-proficiency">
+            </div>
+          </div>
+          <div class="flex flex-row justify-between">
+            <a href="" class="block mt-4 pt-2 underline text-violet-500 text-lg underline-offset-4"
+              id="add-skill-button">Add Skill</a>
+            <div>
+              <a href="" class="block mt-4 pt-2 underline text-violet-500 text-lg underline-offset-4"
+                id="delete-skills-button">Delete Skills</a>
+              <a href="" class="block mt-4 pt-2 underline text-violet-500 text-lg underline-offset-4"
+                id="delete-hobbies-button">Delete Hobbies</a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t-2 border-t-slate-500 mt-6 pt-3 hidden" id="all-hobbies">
+          <ul class="text-center text-white">
+            <!-- All hobbies will be displayed here -->
+          </ul>
+        </div>
+        <div class="border-t-2 border-t-slate-500 mt-6 pt-3 hidden" id="all-skills">
+          <ul class="text-center text-white">
+            <!-- All skills will be displayed here -->
+          </ul>
+        </div>
+        <button class="primary-button block mx-auto mt-5">Update Profile</button>
+      </section>
+      <div class="hidden" id="user-id">
+        <%= userId %>
+      </div>
+    </div>
+    <script src="../public/app.js"></script>
+    <%- include("./partials/footer"); -%>

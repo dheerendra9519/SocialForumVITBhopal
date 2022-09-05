@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Utility Classes */
+.card{
+  background: #2a2a2a;
+  box-shadow: -1rem 0 3rem #000;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.primary-button{
+  color: white;
+  background-color: #833eef;
+  border-radius: 10px;
+  padding: 9px;
+  text-align: center;
+  font-weight: 500;
+  min-width: 5.5rem;
+}
+.primary-button:hover{
+  background: #6d28d9;
+  transition: 0.25s;
+}
+.secondary-button{
+  color: #a370f5;
+  font-weight: bold;
+  border: 2px solid #a370f5;
+  text-align: center;
+  padding: 9px; 
+  border-radius: 10px;
+  min-width: 10rem;
+}
+.post-title{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.post-body{
+  font-size: 0.95rem;
+}
+h1{
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+h3{
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+button{
+  display: inline-block;
+}
+body{
+  position: relative;
+}
+input:focus, textarea:focus{
+  outline: none;
+}
+
+/* Navbar */
+nav ul li:hover{
+  transition: 0.25s;
+  color: #a16df3;
+  border-bottom: 3px solid #a16df3;
+}
+#user-icon:hover > div{
+  display: block;
+  top: 3.2rem;
+  left: -1rem; 
+  background: #2a2a2a;
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+}
+#home-page{
+  max-width: 1700px;
+  margin: 5rem auto;
+}
+
+/* Make POST */
+#make-post .card{
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+}
+#make-post form input{
+  display: block;
+}
+#make-post form input[type="text"]::placeholder{
+  font-size: 1.15rem;
+}
+form textarea::placeholder{
+  font-weight: 100;
+}
+
+/* User-Profile section */
+#user-profile{
+  padding: 3rem;
+  position: absolute; 
+  top: 15rem; 
+  left: 45rem;
+}
+#user-profile-wrapper{
+  content: '';
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+#user-profile > *{
+  z-index: 1;
+}
+#user-profile input{
+  background: #2a2a2a
+}
+#user-profile-cancel-button{
+  position: relative; 
+  left: 36rem; 
+  bottom: 1.5rem;
+}
+
+/* FOOTER section */
+#contact-section{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+#contact-form input, #contact-form textarea{
+  display: block;
+}
+
+/* LOGIN Page */
+#login-page input, #login-page label{
+  display: block;
+}
+#login-page label, #register-page label{
+  font-size: 1.5rem;
+}
+#login-page input, #register-page input, #contact-form input, #contact-form textarea, #admin-page input{
+  background: #2a2a2a;
+}
+
+/* EVENTS Page */
+#holidays-section > div > div:nth-child(3){
+  padding-left: 2rem;
+}
+#horizontal-bar{
+  height: 0.15rem;
+}
+
+/* ADMIN Page */
+#admin-page{
+  max-width: 100rem;
+}
